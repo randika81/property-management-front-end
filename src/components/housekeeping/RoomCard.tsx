@@ -141,7 +141,7 @@ const RoomCard = ({ room, onAction, onReportIssue }: RoomCardProps) => {
                 <span className="text-sm font-medium text-red-900">Issues:</span>
               </div>
               <ul className="text-sm text-red-800">
-                {room.issues.map((issue, index) => (
+                {room.issues.map((issue: string, index: number) => (
                   <li key={index}>• {issue}</li>
                 ))}
               </ul>
