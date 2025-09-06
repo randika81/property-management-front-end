@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
 import Layout from '@/components/layout/Layout';
+import SignIn from '@/components/auth/SignIn';
+import SignUp from '@/components/auth/SignUp';
+import ForgotPassword from '@/components/auth/ForgotPassword';
 import Dashboard from '@/components/screens/Dashboard';
 import AvailabilityBoard from '@/components/screens/AvailabilityBoard';
 import ReservationWizard from '@/components/screens/ReservationWizard';
@@ -14,6 +17,9 @@ function App() {
       <div className="min-h-screen bg-slate-50">
         <Layout>
           <Routes>
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/availability" element={<AvailabilityBoard />} />
